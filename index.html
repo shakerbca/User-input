@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogoIpsum</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+       
+        <div class="nav-left">
+            <img src="./img/Vector.png" class="logo">
+            <img src="./img/LOGOIPSUM.png" class="logo1">
+            
+        </div>
+        <div class="nav-right">
+            
+            <a href="#dashboard">Dashboard</a>
+            <a href="#account">Account</a>
+            <a href="#help">Help</a>
+            <a href="#logout">Logout</a>
+            <div id="marker"></div>
+        
+        </div> 
+    </nav>
+    <div class="image">
+        <img src="./img/s10.jpg">
+    </div>
+
+    <div class="box">
+        <div class="form">
+            <h2>Sign in</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" required="required">
+                <span>Useremail</span>
+                <i></i>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Userpassword</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="#">Signup</a>
+            </div>
+            <input type="submit" value="login">
+        </div>
+    </div>
+
+    <div class="loader"></div>
+    <div class="loader"></div>
+
+    <div class="container1">
+        <div class="para1">
+            <h1>Manual Configuration</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam officiis repellendus mollitia eos. Ipsum voluptatibus, vitae nisi iusto ex, magni numquam excepturi facere dolor quod aut. Repellendus eveniet deserunt minus!</p>
+            <hr>
+        </div>
+        <div class="para2">
+        <h4>Services Access</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus consectetur pariatur maiores obcaecati inventore, eveniet beatae ad dolores expedita, neque dolorum iure suscipit doloribus, earum excepturi. Facere, quis pariatur.</p>
+        <hr>
+    </div>
+    <div class="para3">
+        <h3>Semi-auto Configuration</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus consectetur pariatur maiores obcaecati inventore, eveniet beatae ad dolores expedita, neque dolorum iure suscipit doloribus, earum excepturi. Facere, quis pariatur.</p>
+        <hr>
+    </div>
+    <div class="para4">
+        <h3>Automation Configuration</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus consectetur pariatur maiores obcaecati inventore, eveniet beatae ad dolores expedita, neque dolorum iure suscipit doloribus, earum excepturi. Facere, quis pariatur.</p>
+        <hr>
+        <hr>
+    </div>
+    </div>
+
+    <div class="myfooter">
+        <h2>farooquishaker10@gmail.com</h2>
+        <h3>Software &copy; Developer</h3>
+    </div>
+    
+
+    <script>
+        const marker = document.querySelector('#marker');
+        const item = document.querySelectorAll('nav-right a'); 
+
+        function Indicator(e){
+            marker.style.left = e.offsetLeft+'px';
+            marker.style.width = e.offsetWidth+'px';
+        }
+
+        item.forEach(Link => {
+            Link.addEventListener('mousemove', (e) => {
+                Indicator(e.target);
+            });
+        });
+    </script>
+</body>
+</html>
